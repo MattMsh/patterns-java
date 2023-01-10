@@ -2,6 +2,7 @@ public class Task {
     private String name = "";
     private String notes = "";
     private double timeRequired;
+    private Boolean isNotes = false;
 
     public Task() {
     }
@@ -36,7 +37,14 @@ public class Task {
         notes = newNotes;
     }
 
+    public void setIsNotes(Boolean isActive) {
+        isNotes = isActive;
+    }
+
     public String toString() {
-        return notes;
+        if (isNotes) {
+            return notes;
+        }
+        return name + " " + notes;
     }
 }

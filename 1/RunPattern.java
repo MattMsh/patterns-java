@@ -72,11 +72,12 @@ public class RunPattern {
         }
 
         // 4. Додати нову модифікацію продукту (Builder).
+        CustomBuilder customBuilder = new CustomBuilder();
         System.out.println("Creating a new custom Appointment with a MeetingBuilder");
         System.out.println("(with actual information)");
         try {
             appt = pimScheduler.createAppointment(
-                    mtgBuilder,
+                    customBuilder,
                     createDate(2023, 1, 4, 10, 00),
                     createDate(2023, 1, 4, 11, 30),
                     "My New Metting",
